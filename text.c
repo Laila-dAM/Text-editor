@@ -27,3 +27,16 @@ if (head == NULL) {
     current = newNode;
 }
 }
+
+void deleteLine() {
+    if (head == NULL)
+    return;
+
+    Node *temp = head;
+    Node *prev = NULL;
+
+    while (temp->next !=NULL){
+        prev = temp;
+        temp = temp->next;
+    }
+}
