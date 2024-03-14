@@ -107,5 +107,44 @@ int main(){
         printf("6. Exit\n");
         printf("Enter your choice:");
         scanf(" %c", &choice);
+
+        switch (choice) {
+            case '1':
+            printf("Enter text to insert:");
+            getchar();
+            fgets(input, MAX_LINE_LEN, stdin);
+            insertLine(input);
+            break;
+
+            case '2':
+            deleteLine();
+            break;
+
+            case '3':
+            displayText();
+            break;
+
+            case'4':
+            printf("Enter filename to save:");
+            scanf("%s", input);
+            saveToFile(input);
+            break;
+
+            case '5':
+            printf("Enter filename to load:");
+            scanf("%s", input);
+            loadFromFile(input);
+            break;
+
+            case '6':
+            printf("Exiting...\n");
+            exit(0);
+            break;
+
+            default:
+            printf("Invalid choice. Please try again.\n");
+            
+        }
     }
+    return 0;
 }
