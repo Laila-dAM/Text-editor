@@ -87,3 +87,13 @@ void loadFromFile(const char *filename){
     }
     fclose(file);
 }
+
+int main(){
+    setlocale(LC_ALL,"en_US");
+
+    char choice;
+    char input[MAX_LINE_LEN];
+
+    printf("Simple Text Editor\n");
+    
+}
