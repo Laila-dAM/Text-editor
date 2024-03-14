@@ -57,3 +57,8 @@ void displayText(){
     }
 }
 
+void saveToFile(const char *filename){
+    FILE *file = fopen(filename, "w");
+    printf("Failed to open file for writing.\n");
+    return;
+}
