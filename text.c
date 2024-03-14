@@ -95,5 +95,17 @@ int main(){
     char input[MAX_LINE_LEN];
 
     printf("Simple Text Editor\n");
-    
+
+
+    while(1){
+        printf("\n=== Menu ===\n");
+        printf("1. Insert line\n");
+        printf("2. Delete line\n");
+        printf("3. Display text\n");
+        printf("4. Save to file\n");
+        printf("5. Load from file\n");
+        printf("6. Exit\n");
+        printf("Enter your choice:");
+        scanf(" %c", &choice);
+    }
 }
