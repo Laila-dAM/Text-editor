@@ -39,4 +39,21 @@ void deleteLine() {
         prev = temp;
         temp = temp->next;
     }
+
+    if(prev !=NULL)
+    prev->next = NULL;
+    else
+    head = NULL;
+
+    free(temp);
 }
+
+void displayText(){
+    Node *temp = head;
+
+    while (temp !=NULL){
+        printf("%s\n", temp->line);
+        temp = temp->next;
+    }
+}
+
