@@ -59,6 +59,17 @@ void displayText(){
 
 void saveToFile(const char *filename){
     FILE *file = fopen(filename, "w");
+   
+   if (file == NULL) {
     printf("Failed to open file for writing.\n");
     return;
+   }
+
+   Node *temp = head;
+   while (temp != NULL) {
+    fprintf(file, "%s\n", temp->line);
+    temp = temp->next;
+   }
+
+   fclose(file);
 }
