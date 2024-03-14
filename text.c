@@ -80,4 +80,10 @@ void loadFromFile(const char *filename){
         printf("Failed to open file for reading.\n");
         return;
     }
+
+    char line[MAX_LINE_LEN];
+    while (fgets(line, MAX_LINE_LEN, file) !=NULL){
+        insertLine(line);
+    }
+    fclose(file);
 }
