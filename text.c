@@ -73,3 +73,11 @@ void saveToFile(const char *filename){
 
    fclose(file);
 }
+
+void loadFromFile(const char *filename){
+    FILE *file = fopen(filename, "r");
+    if (file == NULL){
+        printf("Failed to open file for reading.\n");
+        return;
+    }
+}
